@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Hub</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="md:mx-0 bg-[#080808] text-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-[#080808]/80  pt-5 backdrop-blur-md">
+        <div class="flex px-4 max-w-7xl mx-auto items-center justify-between pb-4">
+            <div class="flex group items-center gap-2">
+                <svg class="w-7 transition-all duration-300 ease-out group-hover:scale-115 group-hover:-rotate-3 h-7 text-orange-800" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v3h2.5l1.5-3H4zm4.5 0l-1.5 3h3l1.5-3H8.5zm5 0l-1.5 3h3l1.5-3h-3zm5 0l-1.5 3H20V6h-1.5zM4 11v7h16v-7H4z" />
+                </svg>
+
+                <a class="text-lg tracking-wide font-semibold text-white transition-colors duration-200"
+                    href="index.html">
+                    Movie<span class="text-orange-700">Hub</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu icon -->
+            <div id="hamburger" class="md:hidden cursor-pointer text-slate-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <!-- Desktop navigation -->
+            <nav class="hidden font-semibold md:flex items-center gap-6 text-sm text-slate-400">
+                <a href="#home" class="hover:text-orange-700 transition-colors duration-200">Home</a>
+                <a href="#about" class="hover:text-orange-700 transition-colors duration-200">About</a>
+                <a href="#search" class="hover:text-orange-700 transition-colors duration-200">Search</a>
+                <a href="#contact" class="hover:text-orange-700 transition-colors duration-200">Contact</a>
+            </nav>
+        </div>
+        <div class="border-b border-slate-900"></div>
+        
+        <div id="toggleCheck" class="md:hidden font-semibold justify-center bg-gray-950 border-b border-gray-900 py-5 flex items-center gap-12 text-sm text-slate-300 hidden">
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="#home">Home</a>
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="#about">About</a>
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="#search">Search</a>
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="#contact">Contact</a>
+        </div>
+
+    </header>
+
+
+
+    <!-- Hero / Search -->
+    <main id="home">
+
+        <section id="search" class="max-w-3xl mx-auto text-center pt-16 sm:pt-24 px-5 pb-14">
+
+            <p class="text-orange-700 text-xs font-medium tracking-widest uppercase mb-3">
+                Your movie library
+            </p>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-slate-100">
+                Find The Movie You <span class="text-orange-700">Love</span>
+            </h1>
+
+            <p class="mt-4 text-sm sm:text-base text-slate-400 max-w-xl mx-auto leading-relaxed">
+                Search through thousands of movies and discover information about
+                the films you want to watch.
+            </p>
+
+            <!-- Search form -->
+            <div class="mt-8">
+                <form id="movieForm" action="" class="flex flex-col sm:flex-row gap-3">
+
+                    <input autocomplete="off" id="movieName" type="text" placeholder="Enter the Movie title..." class="w-full bg-[#111111] border border-gray-800 rounded-lg px-4 py-2.5
+                        text-slate-100 placeholder:text-gray-700
+                        outline-none transition-all duration-200
+                        focus:border-orange-800 focus:ring-1 focus:ring-orange-800">
+
+                    <button class="sm:w-auto px-5 py-2.5 bg-orange-800 cursor-pointer hover:bg-orange-700
+                        text-white font-medium rounded-lg
+                        transition-all duration-200
+                        hover:-translate-y-0.5 active:translate-y-0">
+                        Search
+                    </button>
+
+                </form>
+            </div>
+
+        </section>
+
+
+        <!-- Movie Results -->
+        <section class="max-w-7xl px-5 mx-auto pb-20">
+
+            <div id="searchResults" class="items-center justify-between hidden mb-6">
+                <h2 class="text-xl font-semibold text-slate-100">
+                    Search Results
+                </h2>
+
+                <div class="h-px flex-1 bg-slate-900 ml-5"></div>
+            </div>
+
+            <div id="movieHub"
+                class="grid items-start grid-cols-2 sm:grid-cols-3 col-span-full lg:grid-cols-4 xl:grid-cols-5 gap-5">
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <div class="border-t border-slate-900">
+            <section id="about" class="px-5 max-w-5xl mx-auto py-20">
+
+                <div class="max-w-2xl">
+                    <p class="text-orange-700 text-sm font-medium tracking-widest uppercase mb-3">
+                        About MovieHub
+                    </p>
+
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-slate-100">
+                        Simple movie discovery.
+                    </h2>
+
+                    <p class="mt-5 text-slate-400 leading-relaxed">
+                        MovieHub is a simple movie search application designed to make
+                        discovering films quick and straightforward. Search for a movie
+                        to explore its poster, title, release year and other available
+                        information.
+                    </p>
+                </div>
+
+            </section>
+        </div>
+
+
+        <!-- Contact -->
+        <div class="border-t border-slate-900">
+            <section id="contact" class="px-5 max-w-5xl mx-auto py-20">
+
+                <div class="max-w-2xl">
+                    <p class="text-orange-700 text-sm font-medium tracking-widest uppercase mb-3">
+                        Contact
+                    </p>
+
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-slate-100">
+                        Have something to say?
+                    </h2>
+
+                    <p class="mt-5 text-slate-400 leading-relaxed">
+                        Found an issue or have a suggestion for MovieHub?
+                        Feel free to get in touch.
+                    </p>
+                    <div class="flex mt-5 gap-5 justify-between">
+                        <div class="flex gap-2 items-center justify-center">
+                            <svg class="w-5 h-5 text-red-500 flex items-center justify-center" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:gurshabad.ae@gmail.com" class=" text-sm text-slate-300
+                        border-b font-semibold border-slate-700 pb-1
+                        hover:text-orange-700 hover:border-orange-800
+                        transition-colors duration-200">
+
+
+                                gurshabad.ae@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg>
+                            <a class="inline-block text-sm text-slate-300
+                        border-b font-semibold border-slate-700 pb-1
+                        hover:text-orange-700 hover:border-orange-800
+                        transition-colors duration-200" href="https://github.com/gurshabad-ae" target="_blank">
+
+
+                                github.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="border-t md:px-5 border-slate-900 py-8">
+
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row
+            items-center justify-between gap-4">
+
+            <a href="index.html" class="font-semibold tracking-wide text-slate-200
+                transition-colors duration-200">
+                Movie<span class="text-orange-700">Hub</span>
+            </a>
+
+            <p class="text-xs text-slate-600">
+                Movie discovery made simple.
+            </p>
+
+            <div class="flex gap-5 text-xs text-slate-500">
+                <p>© 2026 MovieHub. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

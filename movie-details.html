@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="md:mx-0 bg-[#080808] text-white">
+    <header class="sticky top-0 bg-[#080808]/80  pt-5 backdrop-blur-md">
+        <div class="flex px-4 max-w-7xl mx-auto items-center justify-between pb-4">
+            <div class="flex group items-center gap-2">
+                <svg class="transition-all duration-300 ease-out group-hover:scale-115 group-hover:-rotate-3 w-7 h-7 text-orange-800" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v3h2.5l1.5-3H4zm4.5 0l-1.5 3h3l1.5-3H8.5zm5 0l-1.5 3h3l1.5-3h-3zm5 0l-1.5 3H20V6h-1.5zM4 11v7h16v-7H4z" />
+                </svg>
+
+                <a class="text-lg tracking-wide font-semibold text-white transition-colors duration-200"
+                    href="index.html">
+                    Movie<span class="text-orange-700">Hub</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu icon -->
+            <div id="hamburger" class="md:hidden cursor-pointer text-slate-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <!-- Desktop navigation -->
+            <nav class="hidden font-semibold md:flex items-center gap-6 text-sm text-slate-400">
+                <a href="index.html#home" class="hover:text-orange-700 transition-colors duration-200">Home</a>
+                <a href="index.html#about" class="hover:text-orange-700 transition-colors duration-200">About</a>
+                <a href="index.html#search" class="hover:text-orange-700 transition-colors duration-200">Search</a>
+                <a href="index.html#contact" class="hover:text-orange-700 transition-colors duration-200">Contact</a>
+            </nav>
+        </div>
+        <div class="border-b border-slate-900"></div>
+        <div id="toggleCheck" class="md:hidden font-semibold justify-center hidden bg-gray-950 border-b border-gray-900 py-5 flex items-center gap-12 text-sm text-slate-300">
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="index.html#home">Home</a>
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="index.html#about">About</a>
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="index.html#search">Search</a>
+            <a class="hover:text-orange-700 transition-colors bg-slate-900 rounded-md px-3 py-1 duration-200" href="index.html#contact">Contact</a>
+        </div>
+    </header>
+
+    <a href="index.html"
+        class="bg-gray-950 text-sm font-semibold py-2 px-3 my-4 w-40 flex text-gray-300 hover:text-white hover:border-slate-800 hover:cursor-pointer md:max-w-7xl md:mx-43 items-center transition-all mx-3 duration-200 ease-linear justify-center gap-3 border rounded-2xl border-slate-900">
+        <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <p>Back to Search</p>
+    </a>
+
+    <div id="movieDetails"
+        class="bg-gray-950 md:max-w-7xl md:mx-auto mt-8 mx-5 border border-slate-900 rounded-2xl overflow-hidden mb-10 px-7">
+
+    </div>
+
+    <footer class="border-t md:px-5 border-slate-900 py-8">
+
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row
+            items-center justify-between gap-4">
+
+            <a href="index.html" class="font-semibold tracking-wide text-slate-200
+                hover:text-orange-700 transition-colors duration-200">
+                Movie<span class="text-orange-700">Hub</span>
+            </a>
+
+            <p class="text-xs text-slate-600">
+                Movie discovery made simple.
+            </p>
+
+            <div class="flex gap-5 text-xs text-slate-500">
+                <p>© 2026 MovieHub. All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="movie-details1.js"></script>
+</body>
+
+</html>
